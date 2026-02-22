@@ -16,7 +16,7 @@ __pycache__/
 .env
 
 # Large dataset files
-dataset/*.csv
+
 dataset/*.xlsx
 
 # OS files
