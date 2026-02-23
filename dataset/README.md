@@ -19,27 +19,26 @@ The dataset includes the following attributes:
 
 | Feature Name | Description |
 |--------------|-------------|
-| `loan_id` | Unique identifier for each loan |
-| `customer_id` | Unique identifier for each customer |
-| `loan_amount` | Total amount of the loan |
-| `term` | Loan term (e.g., 36 or 60 months) |
-| `interest_rate` | Interest rate applied to the loan |
-| `grade` | Loan grade assigned by lender |
-| `sub_grade` | More detailed sub-grade of the loan |
-| `employment_length` | Length of employment in years |
-| `home_ownership` | Home ownership status (e.g., RENT, OWN, MORTGAGE) |
-| `annual_income` | Annual income of the borrower |
-| `verification_status` | Whether the income is verified |
-| `purpose` | Purpose of the loan (e.g., debt consolidation, credit card) |
-| `dti` | Debt-to-income ratio |
-| `delinquency_2yrs` | Number of 30+ days past-due incidences of delinquency in the past 2 years |
-| `fico_range_low` | Lower bound of FICO credit score |
-| `fico_range_high` | Upper bound of FICO credit score |
-| `open_acc` | Number of open credit accounts |
-| `total_acc` | Total number of credit accounts |
-| `loan_status` | **Target variable:** whether the loan defaulted (1 = default, 0 = paid) |
+| `LoanID` | Unique identifier for each loan |
+| `Age` | Age of the borrower |
+| `Income` | Annual income of the borrower |
+| `LoanAmount` | Total amount of the loan |
+| `CreditScore` | Credit score of the borrower |
+| `MonthsEmployed` | Number of months the borrower has been employed |
+| `NumCreditLines` | Number of open credit lines |
+| `InterestRate` | Interest rate applied to the loan |
+| `LoanTerm` | Loan term in months |
+| `DTIRatio` | Debt-to-income ratio |
+| `Education` | Education level (High School, Bachelor's, Master's, PhD) |
+| `EmploymentType` | Type of employment (e.g., Full-time, Part-time, Self-employed, Unemployed) |
+| `MaritalStatus` | Marital status of the borrower (e.g., Single, Married, Divorced) |
+| `HasMortgage` | Whether the borrower has a mortgage (Yes/No) |
+| `HasDependents` | Whether the borrower has dependents (Yes/No) |
+| `LoanPurpose` | Purpose of the loan (e.g., Home, Auto, Education, Business, Other) |
+| `HasCoSigner` | Whether the loan has a co-signer (Yes/No) |
+| `Default` | **Target variable:** whether the loan defaulted (1 = default, 0 = paid) |
 
-> **Note:** `loan_status` is the column you will predict using machine learning algorithms.
+> **Note:** `Default` is the column you will predict using machine learning algorithms.
 
 ## Objective
 
