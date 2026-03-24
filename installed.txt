@@ -4,38 +4,47 @@ pip install scipy
 
 ML-assignment/
 │
-├── members.txt
-├── submission.txt
-├── report/
-│   ├── ML_Assignment_Report.pdf
-│   └── source_code_appendix.txt
+├── data/
+│   ├── raw/                  # Original dataset (unchanged)
+│   ├── processed/            # Cleaned/preprocessed data
+│   └── README.md             # Source + description of dataset
 │
 ├── notebooks/
-│   ├── 01_Data_Preprocessing.ipynb
-│   ├── 02_Algorithm_1.ipynb
-│   ├── 03_Algorithm_2.ipynb
-│   ├── 04_Algorithm_3.ipynb
-│   ├── 05_Algorithm_4.ipynb
-│   └── comparison_and_evaluation.ipynb
+│   ├── 01_data_preprocessing.ipynb
+│   ├── 02_algorithm_1.ipynb
+│   ├── 03_algorithm_2.ipynb
+│   ├── 04_algorithm_3.ipynb
+│   └── 05_algorithm_4.ipynb
 │
 ├── src/
-│   ├── preprocessing.py
-│   ├── model1.py
-│   ├── model2.py
-│   ├── model3.py
-│   ├── model4.py
-│   └── evaluation.py
-│
-├── dataset/
-│   └── dataset_description.txt
+│   ├── preprocessing.py      # Data cleaning, feature engineering
+│   ├── utils.py              # Helper functions
+│   ├── models/
+│   │   ├── model1.py
+│   │   ├── model2.py
+│   │   ├── model3.py
+│   │   └── model4.py
+│   └── evaluation.py         # Metrics (accuracy, confusion matrix, etc.)
 │
 ├── results/
-│   ├── figures/
-│   ├── confusion_matrices/
-│   ├── evaluation_metrics.csv
-│   └── model_comparison_table.csv
+│   ├── figures/              # Graphs, plots
+│   ├── tables/               # Accuracy comparisons
+│   └── summary.txt           # Final results summary
+│
+├── report/
+│   ├── report.pdf            # FINAL REPORT (required)
+│   └── appendix_code.txt     # Code (as TEXT, not screenshots ⚠️)
 │
 ├── presentation/
-│   └── slides.pdf
+│   └── slides.pptx           # Optional (for video)
 │
-└── README.md
+├── video/
+│   └── video_link.txt        # YouTube link
+│
+├── submission/
+│   ├── members.txt           # IDs + emails
+│   └── submission.txt        # dataset + github + video links
+│
+├── README.md                 # Project overview
+├── requirements.txt          # Python libraries
+└── .gitignore
