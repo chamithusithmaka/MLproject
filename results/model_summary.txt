@@ -1,0 +1,22 @@
+============================================================
+LOGISTIC REGRESSION MODEL - RESULTS SUMMARY
+============================================================
+
+TRAINING METRICS:
+  Accuracy:  0.7047
+  Precision: 0.6982
+  Recall:    0.7212
+  F1-Score:  0.7095
+
+TEST METRICS:
+  Accuracy:  0.6864
+  Precision: 0.2203
+  Recall:    0.6746
+  F1-Score:  0.3322
+  ROC-AUC:   0.7578
+
+CONFUSION MATRIX:
+  True Negatives:  4867
+  False Positives: 2208
+  False Negatives: 301
+  True Positives:  624

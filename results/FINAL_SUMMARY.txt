@@ -1,0 +1,45 @@
+
+╔════════════════════════════════════════════════════════════╗
+║  LOGISTIC REGRESSION MODEL - LOAN DEFAULT PREDICTION      ║
+╚════════════════════════════════════════════════════════════╝
+
+DATASET INFORMATION:
+  • Training Samples: 56604
+  • Test Samples: 8000
+  • Features Used: 22
+  • Target Variable: Loan Default (Yes/No)
+  • Class Distribution: Balanced using SMOTE
+
+MODEL PERFORMANCE:
+  • Train Accuracy:  70.47%
+  • Test Accuracy:   68.64% ✓
+  • Test F1-Score:   0.3322
+  • Test ROC-AUC:    0.7578
+  • Precision:       0.2203
+  • Recall:          0.6746
+
+PERFORMANCE RATING: FAIR
+
+KEY INSIGHTS:
+  • True Positives (TP):  624 (Correctly identified defaults)
+  • True Negatives (TN):  4867 (Correctly identified non-defaults)
+  • False Positives (FP): 2208 (Type I Error)
+  • False Negatives (FN): 301 (Type II Error)
+
+TOP 3 IMPORTANT FEATURES:
+  1. Age: -0.6989
+  2. InterestRate: 0.5448
+  3. MonthsEmployed: -0.4031
+
+MODEL INTERPRETATION:
+  • Accuracy (68.64%): Model correctly predicts loan default
+  • Recall (0.6746): Model catches ~67.5% of actual defaults
+  • Precision (0.2203): When model predicts default, correct 22.0% of the time
+  • ROC-AUC (0.7578): Good discrimination ability
+
+FILES GENERATED:
+  ✓ logistic_regression_results.csv - Detailed metrics
+  ✓ model_summary.txt - Model summary
+  ✓ extended_summary.txt - Comprehensive report
+  ✓ logistic_regression_evaluation.png - Confusion matrix & ROC curve
+  ✓ feature_importance.png - Top 10 features
