@@ -1,0 +1,2 @@
+accuracy,precision,recall,f1_score,auc_roc,model
+0.754125,0.2395,0.5178378378378379,0.3275213675213675,0.7338571674147646,Random Forest (Tuned)
