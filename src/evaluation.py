@@ -8,7 +8,6 @@ from sklearn.metrics import (
     confusion_matrix, classification_report, roc_auc_score, roc_curve
 )
 
-
 def evaluate_model(y_true, y_pred, y_prob=None, model_name='Model'):
     """calculate and print metrics"""
     metrics = {
@@ -32,7 +31,6 @@ def evaluate_model(y_true, y_pred, y_prob=None, model_name='Model'):
 
     return metrics
 
-
 def plot_confusion_matrix(y_true, y_pred, model_name='Model'):
     """plot confusion matrix"""
     cm = confusion_matrix(y_true, y_pred)
@@ -48,7 +46,6 @@ def plot_confusion_matrix(y_true, y_pred, model_name='Model'):
     plt.show()
 
     return cm
-
 
 def plot_roc_curve(y_true, y_prob, model_name='Model'):
     """plot roc curve"""
@@ -66,7 +63,6 @@ def plot_roc_curve(y_true, y_prob, model_name='Model'):
     plt.show()
 
     return auc
-
 
 def compare_models(results_dict):
     """compare model metrics"""
