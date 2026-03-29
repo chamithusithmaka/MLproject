@@ -77,9 +77,9 @@ def split_and_scale(data, target_col='Default', test_size=0.2, random_state=42):
     return x_train_scaled, x_test_scaled, y_train, y_test, scaler, feature_names
 
 
-def apply_smote(x_train, y_train, random_state=42):
+def apply_smote(x_train, y_train, random_state=42, sampling_strategy='auto'):
     """apply smote"""
-    smote = SMOTE(random_state=random_state)
+    smote = SMOTE(random_state=random_state, sampling_strategy=sampling_strategy)
     x_resampled, y_resampled = smote.fit_resample(x_train, y_train)
     return x_resampled, y_resampled
 

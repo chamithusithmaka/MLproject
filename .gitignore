@@ -1,24 +1,86 @@
-# Virtual Environment
-
-
-# Python cache
+# -----------------------------
+# Python bytecode and cache
+# -----------------------------
 __pycache__/
-*.pyc
-*.pyo
+*.py[cod]
+*$py.class
 
-# Jupyter Notebook checkpoints
+# -----------------------------
+# Distribution / packaging
+# -----------------------------
+build/
+dist/
+*.egg-info/
+.eggs/
+
+# -----------------------------
+# Virtual environments
+# -----------------------------
+.venv/
+venv/
+env/
+ENV/
+
+# -----------------------------
+# Jupyter
+# -----------------------------
 .ipynb_checkpoints/
 
-# VS Code settings
+# -----------------------------
+# Test / lint / type-check cache
+# -----------------------------
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+.coverage.*
+htmlcov/
+
+# -----------------------------
+# IDE and editor settings
+# -----------------------------
 .vscode/
+.idea/
 
-# Environment variables
+# -----------------------------
+# Environment and local secrets
+# -----------------------------
 .env
+.env.*
+!.env.example
 
-# Large dataset files
+# -----------------------------
+# Logs and runtime artifacts
+# -----------------------------
+*.log
+*.tmp
+*.temp
 
+# -----------------------------
+# Local databases and app state
+# -----------------------------
+*.db
+*.sqlite
+*.sqlite3
+
+# -----------------------------
+# ML artifacts (generated files)
+# -----------------------------
+models/
+checkpoints/
+artifacts/
+mlruns/
+wandb/
+
+# -----------------------------
+# Optional large/raw dataset files
+# Keep CSVs in dataset/ tracked by default
+# -----------------------------
 dataset/*.xlsx
+dataset/*.xls
 
+# -----------------------------
 # OS files
+# -----------------------------
 .DS_Store
 Thumbs.db
