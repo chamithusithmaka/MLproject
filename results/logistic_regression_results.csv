@@ -1,2 +1,2 @@
 Model,Best_C,Best_Penalty,Best_Solver,Optimal_Threshold,Train_Accuracy,Train_F1,Test_Accuracy_Default,Test_Precision_Default,Test_Recall_Default,Test_F1_Default,Test_Accuracy_Optimal,Test_Precision_Optimal,Test_Recall_Optimal,Test_F1_Optimal,Test_ROC_AUC,Test_MCC,Test_BalancedAcc
-Logistic Regression,10,l2,lbfgs,0.64,0.6685,0.594,0.6903,0.2278,0.6975,0.3434,0.8099,0.3052,0.4984,0.3785,0.7614,0.2854,0.6746
+Logistic Regression,0.01,l1,liblinear,0.56,0.6932,0.6755,0.767,0.2546,0.5463,0.3473,0.8185,0.309,0.4846,0.3774,0.746,0.2868,0.6729
