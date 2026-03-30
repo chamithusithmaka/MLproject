@@ -1,2 +1,2 @@
-Model,Train_Accuracy,Train_Precision,Train_Recall,Train_F1,Test_Accuracy,Test_Precision,Test_Recall,Test_F1,Test_ROC_AUC
-Logistic Regression,0.7047028478552753,0.6981564455997538,0.7212211151155395,0.7095013816715618,0.686375,0.22033898305084745,0.6745945945945946,0.33217993079584773,0.7578031515614555
+Model,Best_C,Best_Penalty,Best_Solver,Optimal_Threshold,Train_Accuracy,Train_F1,Test_Accuracy_Default,Test_Precision_Default,Test_Recall_Default,Test_F1_Default,Test_Accuracy_Optimal,Test_Precision_Optimal,Test_Recall_Optimal,Test_F1_Optimal,Test_ROC_AUC,Test_MCC,Test_BalancedAcc
+Logistic Regression,0.01,l1,liblinear,0.56,0.6932,0.6755,0.767,0.2546,0.5463,0.3473,0.8185,0.309,0.4846,0.3774,0.746,0.2868,0.6729
