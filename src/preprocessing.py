@@ -1,11 +1,9 @@
 """data preprocessing helpers"""
-
 import pandas as pd
 import numpy as np
 from sklearn.model_selection import train_test_split
 from sklearn.preprocessing import StandardScaler
 from imblearn.over_sampling import SMOTE
-
 
 def load_data(filepath, sample_size=None, random_state=42):
     """load dataset, optional sampling"""
@@ -13,7 +11,6 @@ def load_data(filepath, sample_size=None, random_state=42):
     if sample_size:
         data = data.sample(n=sample_size, random_state=random_state)
     return data
-
 
 def fill_missing_values(data):
     """fill missing values"""
@@ -28,7 +25,6 @@ def fill_missing_values(data):
         df[col].fillna(df[col].median(), inplace=True)
 
     return df
-
 
 def encode_features(data):
     """encode features"""
@@ -56,7 +52,6 @@ def encode_features(data):
 
     return df
 
-
 def split_and_scale(data, target_col='Default', test_size=0.2, random_state=42):
     """split train/test and scale"""
     X = data.drop(target_col, axis=1)
@@ -69,7 +64,6 @@ def split_and_scale(data, target_col='Default', test_size=0.2, random_state=42):
         random_state=random_state,
         stratify=y
     )
-
     scaler = StandardScaler()
     x_train_scaled = scaler.fit_transform(x_train)
     x_test_scaled = scaler.transform(x_test)
@@ -82,7 +76,6 @@ def apply_smote(x_train, y_train, random_state=42, sampling_strategy='auto'):
     smote = SMOTE(random_state=random_state, sampling_strategy=sampling_strategy)
     x_resampled, y_resampled = smote.fit_resample(x_train, y_train)
     return x_resampled, y_resampled
-
 
 def preprocess_pipeline(filepath, sample_size=None, apply_smote_flag=True):
     """full preprocessing pipeline"""
