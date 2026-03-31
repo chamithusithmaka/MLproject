@@ -1,2 +1,2 @@
-Model,Train Accuracy,Train Precision,Train Recall,Train F1,Test Accuracy,Test Precision,Test Recall,Test F1,Test ROC-AUC
-Decision Tree,0.7214547504933747,0.7176503186478249,0.7301945305892303,0.7238680827277809,0.6685,0.18221574344023322,0.5506607929515418,0.2738225629791895,0.6436699787065402
+Model,Train Accuracy,Train Precision,Train Recall,Train F1,Test Accuracy,Test Precision,Test Recall,Test F1,Test ROC-AUC,Best Threshold,Best Params
+Decision Tree (Tuned),0.9916126303918804,0.9947510285146829,0.9884409360022555,0.9915859435763276,0.7665,0.15714285714285714,0.2422907488986784,0.19064124783362218,0.5377666962340143,0.1,"{'min_samples_split': 5, 'min_samples_leaf': 1, 'max_features': None, 'max_depth': None, 'criterion': 'entropy'}"
