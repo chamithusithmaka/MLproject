@@ -1,10 +1,8 @@
 """utility helpers"""
-
 import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
 import seaborn as sns
-
 
 def load_processed_data(base_path='../dataset/processed'):
     """load processed datasets"""
@@ -13,7 +11,6 @@ def load_processed_data(base_path='../dataset/processed'):
         'train': pd.read_csv(f'{base_path}/train_preprocessed_smote.csv'),
         'test': pd.read_csv(f'{base_path}/test_preprocessed.csv')
     }
-
 
 def get_features_and_target(df, target_col='Default'):
     """split features and target"""
@@ -37,7 +34,6 @@ def plot_class_distribution(y, title='Class Distribution'):
     plt.tight_layout()
     plt.show()
 
-
 def plot_feature_importance(feature_names, importances, top_n=15, title='Feature Importance'):
     """plot feature importance"""
     # build and sort dataframe
@@ -54,7 +50,6 @@ def plot_feature_importance(feature_names, importances, top_n=15, title='Feature
     plt.show()
 
     return importance_df.sort_values('importance', ascending=False)
-
 
 def print_dataset_info(data, name='Dataset'):
     """print dataset info"""

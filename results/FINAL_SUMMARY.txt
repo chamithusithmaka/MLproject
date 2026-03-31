@@ -1,45 +1,75 @@
 
-╔════════════════════════════════════════════════════════════╗
-║  LOGISTIC REGRESSION MODEL - LOAN DEFAULT PREDICTION      ║
-╚════════════════════════════════════════════════════════════╝
+=================================================================
+ LOGISTIC REGRESSION — LOAN DEFAULT PREDICTION
+ FINAL RESULTS SUMMARY
+=================================================================
 
-DATASET INFORMATION:
-  • Training Samples: 56604
-  • Test Samples: 8000
-  • Features Used: 22
-  • Target Variable: Loan Default (Yes/No)
-  • Class Distribution: Balanced using SMOTE
+DATASET:
+  Source          : Coursera Loan Default Prediction (Kaggle)
+  Total Samples   : 16,188
+  Training Samples: 14,188
+  Test Samples    : 2,000
+  Features Used   : 22
+  Target          : Default (1=Default, 0=No Default)
 
-MODEL PERFORMANCE:
-  • Train Accuracy:  70.47%
-  • Test Accuracy:   68.64% ✓
-  • Test F1-Score:   0.3322
-  • Test ROC-AUC:    0.7578
-  • Precision:       0.2203
-  • Recall:          0.6746
+PREPROCESSING:
+  - Loaded from pre-processed pipeline (utils.py)
+  - Dropped LoanID (non-predictive)
+  - Outlier capping (1st/99th percentile)  
+  - Binary encoding: HasMortgage, HasDependents, HasCoSigner
+  - Ordinal encoding: Education
+  - One-hot encoding: EmploymentType, MaritalStatus, LoanPurpose
+  - StandardScaler normalization
+  - SMOTE oversampling (training set only)
+
+BEST HYPERPARAMETERS:
+  C (Regularization) : 0.01
+  Penalty            : l1
+  Solver             : liblinear
+  Optimal Threshold  : 0.56
+  (Tuned via 5-fold GridSearchCV, scoring=F1)
+
+TEST RESULTS (Default Threshold = 0.50):
+  Accuracy   : 0.7670 (76.70%)
+  Precision  : 0.2546
+  Recall     : 0.5463
+  F1-Score   : 0.3473
+  ROC-AUC    : 0.7460
+
+TEST RESULTS (Optimal Threshold = 0.56):
+  Accuracy   : 0.8185 (81.85%)
+  Precision  : 0.3090
+  Recall     : 0.4846
+  F1-Score   : 0.3774
+  ROC-AUC    : 0.7460
+  MCC        : 0.2868
+  Balanced Acc: 0.6729
+
+CONFUSION MATRIX (Optimal Threshold):
+  True Negatives  (TN): 1,527  (Correctly predicted: No Default)
+  False Positives (FP): 246  (Type I Error)
+  False Negatives (FN): 117  (Type II Error)
+  True Positives  (TP): 110  (Correctly predicted: Default)
+
+TOP 5 PREDICTIVE FEATURES:
+  1. Age                            coef = -0.6048
+  2. InterestRate                   coef = +0.4770
+  3. MonthsEmployed                 coef = -0.3283
+  4. LoanAmount                     coef = +0.2936
+  5. Income                         coef = -0.2743
 
 PERFORMANCE RATING: FAIR
 
-KEY INSIGHTS:
-  • True Positives (TP):  624 (Correctly identified defaults)
-  • True Negatives (TN):  4867 (Correctly identified non-defaults)
-  • False Positives (FP): 2208 (Type I Error)
-  • False Negatives (FN): 301 (Type II Error)
-
-TOP 3 IMPORTANT FEATURES:
-  1. Age: -0.6989
-  2. InterestRate: 0.5448
-  3. MonthsEmployed: -0.4031
-
-MODEL INTERPRETATION:
-  • Accuracy (68.64%): Model correctly predicts loan default
-  • Recall (0.6746): Model catches ~67.5% of actual defaults
-  • Precision (0.2203): When model predicts default, correct 22.0% of the time
-  • ROC-AUC (0.7578): Good discrimination ability
-
-FILES GENERATED:
-  ✓ logistic_regression_results.csv - Detailed metrics
-  ✓ model_summary.txt - Model summary
-  ✓ extended_summary.txt - Comprehensive report
-  ✓ logistic_regression_evaluation.png - Confusion matrix & ROC curve
-  ✓ feature_importance.png - Top 10 features
+FILES SAVED TO ../results/:
+  - logistic_regression_results.csv       (all metrics)
+  - logistic_regression_evaluation.png    (confusion matrix + ROC)
+  - feature_importance.png                (top 15 features)
+  - threshold_analysis.png                (threshold sweep)
+  - cv_results.png                        (cross-validation)
+  - learning_curves.png                   (learning curves)
+  - probability_calibration.png           (probability calibration)
+  - threshold_metrics_comparison.png      (default vs optimal)
+  - eda_class_distribution.png            (EDA)
+  - eda_correlation_heatmap.png           (correlation)
+  - FINAL_SUMMARY.txt                     (this summary)
+=================================================================
