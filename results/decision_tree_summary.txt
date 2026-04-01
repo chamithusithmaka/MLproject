@@ -1,25 +1,29 @@
 Decision Tree Model Summary
 ===========================
 
-Train Accuracy: 0.7215
-Train Precision: 0.7177
-Train Recall: 0.7302
-Train F1-score: 0.7239
+Configuration:
+Best Params: {'min_samples_split': 20, 'min_samples_leaf': 5, 'max_features': 'log2', 'max_depth': 15, 'criterion': 'log_loss', 'ccp_alpha': 0.0005}
+Best Threshold: 0.49
 
-Test Accuracy: 0.6685
-Test Precision: 0.1822
-Test Recall: 0.5507
-Test F1-score: 0.2738
-Test ROC-AUC: 0.6437
+Train Accuracy: 0.8351
+Train Precision: 0.8384
+Train Recall: 0.8301
+Train F1-score: 0.8343
+
+Test Accuracy: 0.7340
+Test Precision: 0.1956
+Test Recall: 0.4317
+Test F1-score: 0.2692
+Test ROC-AUC: 0.6403
 
 Top 10 Important Features:
-Age : 0.3144
-InterestRate : 0.2315
-NumCreditLines : 0.1846
-Education : 0.0734
-Income : 0.0680
-MonthsEmployed : 0.0465
-LoanAmount : 0.0248
-EmploymentType_Unemployed : 0.0244
-CreditScore : 0.0121
-LoanPurpose_Education : 0.0100
+Age : 0.1523
+Education : 0.1362
+NumCreditLines : 0.1215
+LoanTerm : 0.0876
+InterestRate : 0.0795
+MonthsEmployed : 0.0671
+LoanAmount : 0.0600
+HasCoSigner : 0.0499
+Income : 0.0488
+HasDependents : 0.0279

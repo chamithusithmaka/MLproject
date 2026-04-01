@@ -1,0 +1,6 @@
+Metric,Baseline Decision Tree,Tuned Decision Tree,Improvement (Tuned - Baseline)
+Accuracy,0.768,0.734,-0.034
+Precision,0.1605,0.1956,0.0352
+Recall,0.2467,0.4317,0.185
+F1-score,0.1944,0.2692,0.0748
+ROC-AUC,0.5407,0.6403,0.0995
